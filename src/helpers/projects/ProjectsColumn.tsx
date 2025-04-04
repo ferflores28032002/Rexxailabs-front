@@ -48,7 +48,7 @@ export const ProjectsColumn: ColumnDef<Project>[] = [
           className="flex items-center gap-3 max-w-[200px] truncate"
           title={client?.name}
         >
-          <div className="w-9 h-9 rounded-full overflow-hidden shadow-md ring-1 ring-gray-300 dark:ring-gray-600">
+          <div className="w-[38px] h-[32px] rounded-full overflow-hidden shadow-md ring-1 ring-gray-300 dark:ring-gray-600">
             {imageUrl ? (
               <Image
                 src={imageUrl}

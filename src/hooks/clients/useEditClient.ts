@@ -23,6 +23,7 @@ export const useEditClient = (): UseMutationResult<ClientResponse, ApiError, { i
     onSuccess: (data) => {
       if (data.client) {
         queryClient.invalidateQueries({ queryKey: ["clients"] });
+        queryClient.invalidateQueries({ queryKey: ["projects"] });
       }
     },
     onError: (error: ApiError) => {
