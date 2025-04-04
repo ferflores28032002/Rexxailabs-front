@@ -1,6 +1,6 @@
 # Rexxailabs - NEXT.JS | REACT QUERY | TYPESCRIPT
 
-**Demo**: [https://Rexxailabs-prod.netlify.app/](https://Rexxailabs-prod.netlify.app/)  
+**Demo**: [https://Rexxailabs-prod.netlify.app/](https://rexxailabs.netlify.app/)  
 *Regístrate, verifica tu correo e inicia sesión para explorar todas las funcionalidades.*
 
 ---
