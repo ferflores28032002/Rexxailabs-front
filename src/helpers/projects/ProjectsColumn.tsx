@@ -1,8 +1,10 @@
-import ProjectRowActions from "@/components/ProjectRowActions";
+import Image from "next/image";
 
 import { ColumnDef } from "@tanstack/react-table";
+
+import ProjectRowActions from "@/components/ProjectRowActions";
+
 import { Project } from "@/services/projects/ListProjectService";
-import Image from "next/image";
 
 export const ProjectsColumn: ColumnDef<Project>[] = [
   {
@@ -48,7 +50,7 @@ export const ProjectsColumn: ColumnDef<Project>[] = [
           className="flex items-center gap-3 max-w-[200px] truncate"
           title={client?.name}
         >
-          <div className="w-[38px] h-[32px] rounded-full overflow-hidden shadow-md ring-1 ring-gray-300 dark:ring-gray-600">
+          <div className="w-[38px] h-[38px] rounded-full overflow-hidden shadow-md ring-1 ring-gray-300 dark:ring-gray-600">
             {imageUrl ? (
               <Image
                 src={imageUrl}
@@ -71,17 +73,10 @@ export const ProjectsColumn: ColumnDef<Project>[] = [
     },
   },
   {
-    accessorKey: "startDate",
-    header: "Inicio",
+    accessorKey: "createdAt",
+    header: "Fecha de creación",
     cell: ({ row }) => (
-      <div>{new Date(row.getValue("startDate")).toLocaleDateString()}</div>
-    ),
-  },
-  {
-    accessorKey: "deliveryDate",
-    header: "Entrega",
-    cell: ({ row }) => (
-      <div>{new Date(row.getValue("deliveryDate")).toLocaleDateString()}</div>
+      <div>{new Date(row.getValue("createdAt")).toLocaleDateString()}</div>
     ),
   },
   {
